@@ -21,3 +21,8 @@ class Rcon(object):
                 return Rcon.rcons[db_num]
         else:
             return Rcon.rcons[db_num]
+        
+        
+if __name__ == "__main__":
+	conn = Rcon.get_conn(0)
+	print conn.sinter("factory_id") 
